@@ -47,7 +47,12 @@ See doc/COPYRIGHT.rdoc for more details.
 <% end %>
 
 <% if @grouped.empty? %>
-  <%= no_results_box %>
+  <div class="no-data"> 
+    <div class="no-data-content"> 
+      <span class="no-data-image no-document-img"></span> 
+      <span class="no-data-title">There is currently nothing to display.</span> 
+    </div>
+  </div>
 <% end %>
 
 <% @grouped.keys.sort.each do |group| %>
